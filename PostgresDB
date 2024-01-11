@@ -47,6 +47,9 @@ sudo -u postgres psql
 CREATE DATABASE your_database_name;
 # CREATE USER your_username WITH PASSWORD 'your_password';
 
+Check role/users:
+\du
+
 alter user postgres with password 'admin#ott9876'
 
 grant permission:
