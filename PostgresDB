@@ -103,6 +103,9 @@ database = The database name. The default is to connect to a database with the s
 ============================================
 
 jdbc:postgresql://localhost:5432/database_name
+             or
+postgresql://username:password@host:port/dbname[?paramspec]
+
 
 
 
