@@ -42,4 +42,41 @@ postgresql-server-dev-12 -->	libraries and headers for C language backend develo
 
 =============================================================================================================
 
+sudo service postgresql start
+sudo -u postgres psql
+CREATE DATABASE your_database_name;
+CREATE USER your_username WITH PASSWORD 'your_password';
+
+grant permission:
+===================
+ALTER ROLE your_username SET client_encoding TO 'utf8';
+ALTER ROLE your_username SET default_transaction_isolation TO 'read committed';
+ALTER ROLE your_username SET timezone TO 'UTC';
+
+GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
+
+exit psql shell:
+===============
+\q
+
+Edit the PostgreSQL configuration file:
+=======================================
+sudo nano /etc/postgresql/13/main/postgresql.conf
+
+Ensure that PostgreSQL listens on the desired IP address and port. 
+================================================================================
+# listen_addresses = 'localhost'         # what IP address(es) to listen on;
+                                        # comma-separated list of addresses;
+                                        # defaults to 'localhost'; use '*' for all
+                                        # (change requires restart)
+# port = 5432                            # (change requires restart)
+
+
+chnage listen_address --> '*' (enable access from all remote server/client)
+
+sudo service postgresql restart
+
+
+
+
 
