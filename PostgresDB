@@ -2,6 +2,13 @@ Postgres Database Server installation on Ubuntu (ec2):
 
 Below steps:
 
+============
+Check os : 
+more /etc/os-release
+
+check postgres installed or not:
+psql --version
+
 # Create the file repository configuration:
 sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
@@ -14,6 +21,10 @@ sudo apt-get update
 # Install the latest version of PostgreSQL.
 # If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
 sudo apt-get -y install postgresql
+
+sudo apt install postgresql postgresql-contrib  (method installs the version that is officially supported and tested for your Ubuntu version)
+sudo apt install postgresql15-server            (installs PostgreSQL version 15 explicitly.)
+sudo apt install postgresql                     (method installs the version that is officially supported and tested for your Ubuntu version)
 ==============================
 
 ***********************
@@ -28,3 +39,7 @@ postgresql-client-12	   -->  client libraries and client binaries
 postgresql-12       -->	      core database server
 libpq-dev	          -->       libraries and headers for C language frontend development
 postgresql-server-dev-12 -->	libraries and headers for C language backend development
+
+=============================================================================================================
+
+
