@@ -102,9 +102,9 @@ database = The database name. The default is to connect to a database with the s
 
 ============================================
 
-jdbc:postgresql://localhost:5432/database_name
+jdbc:postgresql://ip-172-30-4-12.ap-south-1.compute.internal:5432/database_name
              or
-postgresql://username:password@host:port/dbname[?paramspec]
+postgresql://username:password@ip-172-30-4-12.ap-south-1.compute.internal:5432/dbname[?paramspec]
 
 
 
