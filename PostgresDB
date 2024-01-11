@@ -14,3 +14,17 @@ sudo apt-get update
 # Install the latest version of PostgreSQL.
 # If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
 sudo apt-get -y install postgresql
+==============================
+
+***********************
+Included in distribution
+*************************
+Ubuntu includes PostgreSQL by default. To install PostgreSQL on Ubuntu, use the apt-get (or other apt-driving) command:
+
+apt-get install postgresql-12
+The repository contains many different packages including third party addons. The most common and important packages are (substitute the version number as required):
+
+postgresql-client-12	   -->  client libraries and client binaries
+postgresql-12       -->	      core database server
+libpq-dev	          -->       libraries and headers for C language frontend development
+postgresql-server-dev-12 -->	libraries and headers for C language backend development
