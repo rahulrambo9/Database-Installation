@@ -45,7 +45,9 @@ postgresql-server-dev-12 -->	libraries and headers for C language backend develo
 sudo service postgresql start
 sudo -u postgres psql
 CREATE DATABASE your_database_name;
-CREATE USER your_username WITH PASSWORD 'your_password';
+# CREATE USER your_username WITH PASSWORD 'your_password';
+
+alter user postgres with password 'admin#ott9876'
 
 grant permission:
 ===================
